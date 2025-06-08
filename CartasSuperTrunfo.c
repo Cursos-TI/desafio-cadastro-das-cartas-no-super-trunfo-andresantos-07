@@ -170,5 +170,7 @@ int main() {
 
        // Impressão do resultado final carta vencedora
        printf("A carta *** %d *** venceu\n", carta1_vs_carta2);
+       
+       return 0;
    
 }

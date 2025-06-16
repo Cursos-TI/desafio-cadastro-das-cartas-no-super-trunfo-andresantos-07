@@ -138,38 +138,20 @@ int main() {
 
        printf("*** Carta 01 versus Carta 02 ***\n\n");
 
-       // Comparar Cartas
-       int carta1_vs_carta2, populacao1XPopulacao2, area1XArea2, pib1XPib2, pontosTuristicos1XPontosTuristicos2;
-       int densidadePopulacionalXDensidadePopulacional2, pibPerCapita1XPibPerCapita2, superPoder1XsuperPoder2;
+        // Comparação (População carta 1 versus carta 2)
+    printf("Carta 1 - %s (SP): %.3f\n", nome_cidade, (float)populacao);
 
-       populacao1XPopulacao2 = populacao > populacao_card2;
-       area1XArea2 = area_em_km2 > area_em_km2_card2;
-       pib1XPib2 = pib > pib_card2;
-       pontosTuristicos1XPontosTuristicos2 = pontos_turisticos > pontos_turisticos_card2;
-       densidadePopulacionalXDensidadePopulacional2 = densidade_populacional < densidade_populacional_card2;
-       pibPerCapita1XPibPerCapita2 = pib_per_capita > pib_per_capita_card2;
-       superPoder1XsuperPoder2 = superPoder > superPoder_card2;
+    printf("Carta 2 - %s (RJ): %.3f\n\n", nome_cidade_card2, (float)populacao_card2);
 
-       // Comparação total carta 01 VS carta 01
-       carta1_vs_carta2 = superPoder > superPoder_card2;
-
-       // Impressão das comparações carta 01 versus carta 02
-       printf("População: carta %d venceu (%d)\n", populacao1XPopulacao2, populacao1XPopulacao2);
-
-       printf("Área: carta %d venceu (%d)\n", area1XArea2, area1XArea2);
-
-       printf("PIB: carta %d venceu (%d)\n", pib1XPib2, pib1XPib2);
-
-       printf("Pontos turísticos: carta %d venceu (%d)\n", pontosTuristicos1XPontosTuristicos2, pontosTuristicos1XPontosTuristicos2);
-
-       printf("Densidade populacional: carta 2 venceu (%d)\n", densidadePopulacionalXDensidadePopulacional2);
-
-       printf("PIB per Capita: carta 2 venceu (%d)\n", pibPerCapita1XPibPerCapita2);
-
-       printf("Super Poder: carta %d venceu (%d)\n\n", superPoder1XsuperPoder2, superPoder1XsuperPoder2);
-
-       // Impressão do resultado final carta vencedora
-       printf("A carta *** %d *** venceu\n", carta1_vs_carta2);
+    // Vencedor
+    if (populacao > populacao_card2)
+    {
+        printf("***Carta 1 Venceu!***\n");
+    }
+    else
+    {
+        printf("***Carta 2 Venceu!***\n\n");
+    }
        
        return 0;
    
